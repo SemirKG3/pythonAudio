@@ -1,0 +1,1 @@
+Place a short beep.wav (mono) fixture here for tests and examples. This repository scaffold does not include binary fixtures by default. You can generate one with `sox` or `ffmpeg` or copy your own beep.wav into this folder.

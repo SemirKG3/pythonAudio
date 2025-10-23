@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-audio-tools"
+version = "0.1.0"
+description = "Small utilities to edit audio files"
+readme = "README.md"
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+dependencies = [
+  "pydub>=0.25.1",
+  "librosa>=0.10.0",
+  "soundfile>=0.12.1",
+  "click>=8.1.0",
+  "numpy"
+]
+
+[project.scripts]
+py-audio-tools = "py_audio_tools.cli:main"
