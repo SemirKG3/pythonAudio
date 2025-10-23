@@ -3,7 +3,12 @@ import math
 import wave
 import struct
 
-def generate_beep(path='tests/fixtures/beep.wav', duration_s=0.5, freq=440.0, sr=44100, amp=0.5):
+freq_SP = 10000.0
+path_SP = f'tests/fixtures/beep_{freq_SP}.wav'
+
+
+def generate_beep(path=path_SP, duration_s=10, freq=freq_SP, sr=44100, amp=0.5):
+
     n_samples = int(sr * duration_s)
     with wave.open(path, 'w') as wf:
         wf.setnchannels(1)
@@ -21,4 +26,4 @@ def generate_beep(path='tests/fixtures/beep.wav', duration_s=0.5, freq=440.0, sr
 
 if __name__ == '__main__':
     generate_beep()
-    print('Generated tests/fixtures/beep.wav')
+    print('Generated', path_SP)
