@@ -32,9 +32,18 @@ To push this project to GitHub:
 2. In this folder run:
 
 ```powershell
-git init; git add .; git commit -m "Initial scaffold"; git remote add origin https://github.com/<your-user>/<your-repo>.git; git branch -M main; git push -u origin main
+# Initialize repository and commit
+git init
+git add .
+git commit -m "Initial scaffold"
+
+# Add remote and push (using your repository)
+git remote add origin https://github.com/SemirKG3/pythonAudio.git
+git branch -M main
+git push -u origin main
 ```
 
 Notes
+
 - pydub depends on ffmpeg for many file formats. Install ffmpeg on your system and ensure it's on PATH.
 - If pydub is not available or can't handle a format, the code falls back to soundfile/librosa where possible.
